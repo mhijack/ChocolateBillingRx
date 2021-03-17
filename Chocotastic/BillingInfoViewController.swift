@@ -81,6 +81,7 @@ private extension BillingInfoViewController {
   }
   
   func setupTextChangeHandling() {
+    /// Validate credit card number
     let creditCardValid = creditCardNumberTextField
       .rx
       .text //1
@@ -97,6 +98,7 @@ private extension BillingInfoViewController {
       })
       .disposed(by: disposeBag) //5
     
+    /// Valid expiration
     let expirationValid = expirationDateTextField
       .rx
       .text
@@ -112,7 +114,8 @@ private extension BillingInfoViewController {
         self.expirationDateTextField.valid = $0
       })
       .disposed(by: disposeBag)
-        
+    
+    /// Valid CVV
     let cvvValid = cvvTextField
       .rx
       .text
@@ -126,6 +129,16 @@ private extension BillingInfoViewController {
       .subscribe(onNext: { [unowned self] in
         self.cvvTextField.valid = $0
       })
+      .disposed(by: disposeBag)
+
+    /// All valid
+    let everythingValid = Observable
+      .combineLatest(creditCardValid, expirationValid, cvvValid) {
+        $0 && $1 && $2 //All must be true
+    }
+        
+    everythingValid
+      .bind(to: purchaseButton.rx.isEnabled)
       .disposed(by: disposeBag)
 
   }
