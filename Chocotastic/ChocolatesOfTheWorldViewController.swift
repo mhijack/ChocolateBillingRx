@@ -48,10 +48,30 @@ extension ChocolatesOfTheWorldViewController {
     setupCartObserver()
     setupCellConfiguration()
     setupCellTapHandling()
+    
+    myJust("jack").subscribe { (str) in
+      print(str)
+    } onError: { (err) in
+      print(err)
+    } onCompleted: {
+      
+    } onDisposed: {
+      
+    }
+    
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+  }
+  
+  // MARK: - Testing
+  func myJust<E>(_ element: E) -> Observable<E> {
+      return Observable.create { observer in
+          observer.on(.next(element))
+          observer.on(.completed)
+          return Disposables.create()
+      }
   }
 }
 

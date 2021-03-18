@@ -14,10 +14,58 @@
             filePath = "Chocotastic/ChocolatesOfTheWorldViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "setupCellConfiguration()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5ED154A-9DA5-4430-9E10-900B4F389C43"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Chocotastic/BillingInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A5ED154A-9DA5-4430-9E10-900B4F389C43 - 14d5483ca1a4b270"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Chocotastic.BillingInfoViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Chocotastic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jianyuanchen/Developer/iOS/ChocolateBillingRx/Chocotastic/BillingInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "324">
+               </Location>
+               <Location
+                  uuid = "A5ED154A-9DA5-4430-9E10-900B4F389C43 - 706d7c2eaa955cc5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in Chocotastic.BillingInfoViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Chocotastic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jianyuanchen/Developer/iOS/ChocolateBillingRx/Chocotastic/BillingInfoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
