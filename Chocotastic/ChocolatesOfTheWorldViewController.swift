@@ -37,6 +37,15 @@ class ChocolatesOfTheWorldViewController: UIViewController {
   
   private let disposeBag = DisposeBag()
   
+  init(counts: Int) {
+    super.init(nibName: nil, bundle: nil)
+  }
+  
+  required init?(coder: NSCoder) {
+    super.init(coder: coder)
+//    fatalError("init(coder:) has not been implemented")
+  }
+  
 }
 
 //MARK: View Lifecycle
@@ -59,6 +68,16 @@ extension ChocolatesOfTheWorldViewController {
       
     }
     
+    
+    /// CALayer
+    let animation = CABasicAnimation(keyPath: "position.x")
+    animation.fromValue = CGPoint.zero
+    animation.toValue = view.bounds.size.width
+    animation.duration = 0.5
+    animation.beginTime = CACurrentMediaTime() + 0.3
+    animation.repeatCount = 4
+    animation.autoreverses = true
+    tableView.layer.add(animation, forKey: nil)
   }
   
   override func viewWillAppear(_ animated: Bool) {
